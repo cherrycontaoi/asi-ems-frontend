@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import "./AdminSignin.css";
 
-const API_BASE = "https://asi-ems-backend-1.onrender.com/";
+const API_BASE = "https://asi-ems-backend-1.onrender.com";
 
 function AdminSignin() {
   const navigate = useNavigate();
