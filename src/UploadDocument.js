@@ -67,7 +67,6 @@ function UploadDocument() {
         try {
             setShowValidation(false);
             setIsLoading(true);
-            const loadingStartTime = Date.now();
 
             const formData = new FormData();
             formData.append("documentType", newDocument.documentType);
@@ -91,20 +90,9 @@ function UploadDocument() {
             console.log("Document added successfully:", data);
 
             setUploadSuccess(true);
-
-            const loadingEndTime = Date.now();
-            const elapsed = loadingEndTime - loadingStartTime;
-
-            if (elapsed < 8000) {
-                setTimeout(() => {
-                    setIsLoading(false);
-                }, 10000 - elapsed);
-            } else {
-                setIsLoading(false);
-            }
-
         } catch (error) {
             console.error("Error adding document:", error.message);
+        } finally {
             setIsLoading(false);
         }
     };
