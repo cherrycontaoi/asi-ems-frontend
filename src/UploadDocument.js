@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "./images/logo-asi.png";
+//import logo_gif from "./images/asi-rotating.gif";
 import "./UploadDocument.css";
 import AdminSignin from "./AdminSignin";
-import { AuthProvider } from "./AuthContext";
 
 const API_BASE = "https://asi-ems-backend-1.onrender.com";
 
@@ -130,29 +130,29 @@ function UploadDocument() {
                         <div className="left-side">
                             <div className="input-field">
                                 Document Type
-                                <p id="field">{newDocument.documentType}</p>
-                            </div>
+                                <text id="field">{newDocument.documentType}</text>
+                            </div><br/>
                             <div className="input-field">
                                 Uploader Name
-                                <p id="field">{newDocument.uploaderName}</p>
-                            </div>
+                                <text id="field">{newDocument.uploaderName}</text>
+                            </div><br/>
                             <div className="input-field">
                                 Description
-                                <p id="field">{newDocument.description}</p>
-                            </div>
+                                <text id="field">{newDocument.description}</text>
+                            </div><br/>
                             <div className="input-field">
                                 Date Acquired
-                                <p id="field">{newDocument.dateAcquired}</p>
+                                <text id="field">{newDocument.dateAcquired}</text>
                             </div>
                         </div>
                         <div className="right-side">
                             <div className="input-field">
                                 Document Number
-                                <p id="field">{newDocument.documentNumber}</p>
-                            </div>
+                                <text id="field">{newDocument.documentNumber}</text>
+                            </div><br/>
                             <div className="input-field">
                                 Quantity
-                                <p id="field">{newDocument.quantity}</p>
+                                <text id="field">{newDocument.quantity}</text>
                             </div>
                         </div>
                     </div>
@@ -285,6 +285,7 @@ function UploadDocument() {
                 {isLoading && (
                     <div className="loading-popup">
                         <div className="loading-content">
+                            
                             <p>Uploading, please wait...</p>
                         </div>
                     </div>
