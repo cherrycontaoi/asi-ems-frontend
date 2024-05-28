@@ -98,7 +98,7 @@ function UploadDocument() {
             if (elapsed < 8000) {
                 setTimeout(() => {
                     setIsLoading(false);
-                }, 8000 - elapsed);
+                }, 10000 - elapsed);
             } else {
                 setIsLoading(false);
             }
