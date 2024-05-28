@@ -234,8 +234,9 @@
 }
 
 #asi-gif {
-    width: 50px;
+    width: 50%;
     height: auto;
+    max-width: 100px;
 }
 
 .loading-content {
