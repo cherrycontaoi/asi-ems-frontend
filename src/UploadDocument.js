@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "./images/logo-asi.png";
 import logo_gif from "./images/asi-rotating.gif";
@@ -13,6 +13,13 @@ function UploadDocument() {
     const [isHovering, setIsHovering] = useState(false);
     const [isLoginFormVisible, setIsLoginFormVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false); // Loading state
+    const [isImageLoaded, setIsImageLoaded] = useState(false); // Image load state
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = logo_gif;
+        img.onload = () => setIsImageLoaded(true);
+    }, []);
 
     const handleLogout = () => {
         sessionStorage.removeItem('isAdminLoggedIn');
@@ -36,7 +43,6 @@ function UploadDocument() {
     };
 
     const handleSubmit = () => {
-        // Check if any of the fields are empty
         if (
             !newDocument.documentType ||
             !newDocument.documentNumber ||
@@ -59,8 +65,8 @@ function UploadDocument() {
 
     const addDocument = async () => {
         try {
-            setShowValidation(false); // Hide validation popup
-            setIsLoading(true); // Show loading popup
+            setShowValidation(false);
+            setIsLoading(true);
 
             const formData = new FormData();
             formData.append("documentType", newDocument.documentType);
@@ -87,7 +93,7 @@ function UploadDocument() {
         } catch (error) {
             console.error("Error adding document:", error.message);
         } finally {
-            setIsLoading(false); // Hide loading popup
+            setIsLoading(false);
         }
     };
 
@@ -282,10 +288,10 @@ function UploadDocument() {
                         </div>
                     </div>
                 )}
-                {isLoading && (
+                {isLoading && isImageLoaded && (
                     <div className="loading-popup">
                         <div className="loading-content">
-                            <img src={logo_gif} id="asi-gif"/>
+                            <img src={logo_gif} id="asi-gif" alt="Loading..." />
                             Uploading, please wait...
                         </div>
                     </div>
