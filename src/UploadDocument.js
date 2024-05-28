@@ -285,7 +285,7 @@ function UploadDocument() {
                 {isLoading && (
                     <div className="loading-popup">
                         <div className="loading-content">
-                            <img src={logo_gif}/>
+                            <img src={logo_gif} id="asi-gif"/>
                             <p>Uploading, please wait...</p>
                         </div>
                     </div>
