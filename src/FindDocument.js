@@ -154,7 +154,7 @@ function FindDocument({ isAdminLoggedIn }) {
                             <div id="doc-count">
                                 Showing {filteredDocuments.length} documents
                             </div>
-                            <ul className="docs-area">
+                            <div className="docs-area">
                                 <div className="list-of-docs">
                                     {filteredDocuments.map((document) => (
                                         <div key={document._id} id="uploaded-doc-line">
@@ -187,7 +187,7 @@ function FindDocument({ isAdminLoggedIn }) {
                                         </div>
                                     ))}
                                 </div>
-                            </ul>
+                            </div>
                         </>
                     )}
                 </div>
