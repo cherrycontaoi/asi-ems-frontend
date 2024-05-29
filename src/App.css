@@ -229,10 +229,5 @@
         width: 48%;
     }
 
-    #admin-section {
-        width: 100%;
-        background-color: rgba(232, 176, 15, 1);
-        padding: 0px;
-        align-items: center;
-    }
+    
 }
