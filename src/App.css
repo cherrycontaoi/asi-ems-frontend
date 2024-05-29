@@ -131,6 +131,10 @@
     color: rgba(232, 176, 15, 1);
 }
 
+#admin-section hr {
+    opacity: 0;
+}
+
 /* For mobile view */
 @media (max-width: 768px) {
     .header {
@@ -229,5 +233,9 @@
         width: 48%;
     }
 
+    .admin-section hr{
+        opacity: 1;
+        width: 100%;
+    }
     
 }
