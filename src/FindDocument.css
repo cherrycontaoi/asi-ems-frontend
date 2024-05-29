@@ -204,6 +204,7 @@
         width: 100%;
         padding: 10px;
         gap: 10px;
+        height: 200px;
     }
 
     .list-of-docs {
