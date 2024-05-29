@@ -257,6 +257,10 @@
         padding: 20px;
     }
 
+    .cancel-button, .upload-button {
+        height: 30px;
+    }
+
     .upload-form-success {
         width: 90%;
         padding: 20px;

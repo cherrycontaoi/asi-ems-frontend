@@ -292,7 +292,7 @@ function UploadDocument() {
                     <div className="loading-popup">
                         <div className="loading-content">
                             <img src={logo_gif} id="asi-gif" alt="Loading..." />
-                            Uploading, please wait...
+                            UPLOADING...
                         </div>
                     </div>
                 )}
