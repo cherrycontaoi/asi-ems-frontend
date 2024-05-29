@@ -230,7 +230,7 @@
     }
 
     #admin-section {
-        border-top: 5px;
-        border-color: white;
+        width: 100%;
+        background-color: rgba(232, 176, 15, 1);
     }
 }
