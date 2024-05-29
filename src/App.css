@@ -30,6 +30,7 @@ html, body {
     background-size: cover;
     background-clip: padding-box;
     width: 100vw;
+    height: 100vh;
     position: relative;
     margin: 0 auto;
     justify-content: center;
