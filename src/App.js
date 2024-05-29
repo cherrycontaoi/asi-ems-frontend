@@ -23,7 +23,6 @@ function LandingPage() {
         <div className="header">
           <div><img src={logo} alt="" id="asi-logo"/></div>
           <div id="admin-section">
-            <hr />
             {isAdminLoggedIn ? (
               <div id="admin-greeting" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
                 Hello, Admin!
