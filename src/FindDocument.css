@@ -187,15 +187,16 @@
     .search-doc {
         flex-direction: column;
         gap: 5px;
+        margin-top: 10px;
     }
 
     #search-field {
-        width: 100%;
+        width: 80%;
     }
 
     #search-button,
     #generate-excel-button {
-        width: 100%;
+        width: 800%;
     }
 
     #uploaded-doc-line {
@@ -227,5 +228,6 @@
     .delete-button {
         width: 100%;
     }
+
 
 }
