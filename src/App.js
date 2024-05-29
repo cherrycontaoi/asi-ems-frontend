@@ -19,7 +19,7 @@ function LandingPage() {
   };
 
   return (
-    <>
+    <div id="home-page">
         <div className="header">
           <div><img src={logo} alt="" id="asi-logo"/></div>
           <div id="admin-section">
@@ -62,7 +62,7 @@ function LandingPage() {
             </div>
             
         </div>
-    </>
+    </div>
 );
 }
 
