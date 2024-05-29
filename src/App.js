@@ -22,22 +22,24 @@ function LandingPage() {
     <>
         <div className="header">
           <div><img src={logo} alt="" id="asi-logo"/></div>
-          {isAdminLoggedIn ? (
-            <div id="admin-greeting" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
-              Hello, Admin!
-              {isHovering && (
-                <div id="admin-dropdown">
-                  <button className="admin-button" onClick={handleLogout}>Sign out</button>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div id="admin-login-div">
-              {!isLoginFormVisible && (
-                <div id="admin-login-button" onClick={() => setIsLoginFormVisible(true)}>Sign in</div>
-              )}
-            </div>
-          )}
+          <div id="admin-section">
+            {isAdminLoggedIn ? (
+              <div id="admin-greeting" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+                Hello, Admin!
+                {isHovering && (
+                  <div id="admin-dropdown">
+                    <button className="admin-button" onClick={handleLogout}>Sign out</button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div id="admin-login-div">
+                {!isLoginFormVisible && (
+                  <div id="admin-login-button" onClick={() => setIsLoginFormVisible(true)}>Sign in</div>
+                )}
+              </div>
+            )}
+          </div>
           {isLoginFormVisible && !isAdminLoggedIn && (
             <div className="admin-login-form">
               <AdminSignin />
