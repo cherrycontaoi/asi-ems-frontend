@@ -12,14 +12,14 @@ function FindDocument({ isAdminLoggedIn }) {
     const [filteredDocuments, setFilteredDocuments] = useState([]);
     const [isHovering, setIsHovering] = useState(false);
     const [isLoginFormVisible, setIsLoginFormVisible] = useState(false);
-    const [isLoading, setIsLoading] = useState(true); // Loading state
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         getDocuments();
     }, []);
 
     const getDocuments = () => {
-        setIsLoading(true); // Set loading to true when fetching starts
+        setIsLoading(true);
         fetch(API_BASE + "/documents")
             .then((res) => res.json())
             .then((data) => {
@@ -27,7 +27,7 @@ function FindDocument({ isAdminLoggedIn }) {
                 setFilteredDocuments(data);
             })
             .catch((err) => console.error("Error: ", err))
-            .finally(() => setIsLoading(false)); // Set loading to false when fetching ends
+            .finally(() => setIsLoading(false));
     };
 
     const handleViewDocument = async (documentId) => {
@@ -81,8 +81,9 @@ function FindDocument({ isAdminLoggedIn }) {
             });
 
             if (response.ok) {
-                // If deletion is successful, update the document list
-                getDocuments();
+                // Update the local state to remove the deleted document
+                setDocuments(prevDocuments => prevDocuments.filter(doc => doc._id !== documentId));
+                setFilteredDocuments(prevFilteredDocuments => prevFilteredDocuments.filter(doc => doc._id !== documentId));
             } else {
                 // If deletion fails, throw an error and log the response
                 const errorData = await response.json(); // Assuming the backend sends error details in JSON format
