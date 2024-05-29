@@ -22,6 +22,7 @@
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(144, 190, 165, 0.5), rgba(5, 68, 34, 0.75)), url("./images/ASI-bg.png");
     background-position: center center;
     background-size: cover;
+    background-clip: padding-box;
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -30,7 +31,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    overflow: hidden;
 }
 
 .menu {
@@ -69,6 +69,10 @@
     font-size: 18px;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+#upload-div:hover, #find-div:hover {
+    color: rgba(232, 176, 15, 1);
 }
 
 #uploadbutton, #findbutton {
