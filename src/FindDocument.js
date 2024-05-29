@@ -160,13 +160,13 @@ function FindDocument({ isAdminLoggedIn }) {
                                         <div key={document._id} id="uploaded-doc-line">
                                             <div className="doc-number">{document.documentNumber}</div>
                                             <div className="doc-uploaderName">
-                                                <p>{document.uploaderName}</p>
+                                                {document.uploaderName}
                                             </div>
                                             <div className="doc-documentType">
-                                                <p>{document.documentType}</p>
+                                                {document.documentType}
                                             </div>
                                             <div className="doc-description">
-                                                <p>{document.description}</p>
+                                                {document.description}
                                             </div>
                                             <div className="doc-buttons">
                                                 <button
