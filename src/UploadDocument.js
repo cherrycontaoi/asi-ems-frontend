@@ -276,16 +276,14 @@ function UploadDocument() {
                     <button onClick={handleSubmit} id="submit-button">UPLOAD</button>
                 </div>
                 {showValidation && (
-                    <div className="overlay">
-                        <div className="validation-popup">
-                            <p>Are you sure you want to submit?</p>
-                            <div className="popupButtons">
-                                <div className="cancel-button">
-                                    <button onClick={handleCancel} id="popupButton1">CANCEL</button>
-                                </div>
-                                <div className="upload-button">
-                                    <button onClick={addDocument} id="popupButton2">UPLOAD</button>
-                                </div>
+                    <div className="validation-popup">
+                        <p>Are you sure you want to submit?</p>
+                        <div className="popupButtons">
+                            <div className="cancel-button">
+                                <button onClick={handleCancel} id="popupButton1">CANCEL</button>
+                            </div>
+                            <div className="upload-button">
+                                <button onClick={addDocument} id="popupButton2">UPLOAD</button>
                             </div>
                         </div>
                     </div>
