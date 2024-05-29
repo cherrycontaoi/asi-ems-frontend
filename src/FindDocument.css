@@ -204,7 +204,7 @@
         width: 100%;
         padding: 10px;
         gap: 0;
-        height: 230px;
+        height: 200px;
     }
 
     .list-of-docs {
@@ -217,7 +217,7 @@
     .doc-documentType,
     .doc-description {
         width: 100%;
-        gap: 3px;
+        gap: 2px;
     }
 
     .doc-buttons {
