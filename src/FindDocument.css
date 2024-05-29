@@ -86,9 +86,14 @@
 
 .docs-area {
     height: 550px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     overflow-y: scroll;
     overflow-x: hidden;
-    scrollbar-width: 0px;
+}
+
+.docs-area::-webkit-scrollbar {
+    display: none;
 }
 
 .list-of-docs {
