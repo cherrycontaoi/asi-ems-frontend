@@ -81,12 +81,10 @@ function FindDocument({ isAdminLoggedIn }) {
             });
 
             if (response.ok) {
-                // Update the local state to remove the deleted document
                 setDocuments(prevDocuments => prevDocuments.filter(doc => doc._id !== documentId));
                 setFilteredDocuments(prevFilteredDocuments => prevFilteredDocuments.filter(doc => doc._id !== documentId));
             } else {
-                // If deletion fails, throw an error and log the response
-                const errorData = await response.json(); // Assuming the backend sends error details in JSON format
+                const errorData = await response.json();
                 throw new Error(`Failed to delete document: ${JSON.stringify(errorData)}`);
             }
         } catch (error) {

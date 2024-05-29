@@ -1,13 +1,4 @@
-/* .docs-body {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(144, 190, 165, 0.5), rgba(5, 68, 34, 0.75)), url("./images/ASI-bg.png");
-    
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-} */
-
-
+/* General styles for PC and mobile */
 .header {
     margin: 0 auto;
     height: 100px;
@@ -32,10 +23,9 @@
     flex-direction: column;
     width: 70%;
     background-color: white;
-    
     padding: 20px;
-    padding-top:1px;
-    font-family: arial;
+    padding-top: 1px;
+    font-family: Arial, sans-serif;
 }
 
 .title-part {
@@ -87,12 +77,10 @@
     font-weight: bold;
 }
 
-#generate-excel-button:hover {
-    box-shadow: 0 12px 10px 0 rgba(0,0,0,0.1),0 12px 10px 0 rgba(0,0,0,0.1);
-    background-color: rgba(232, 176, 15, 1);
-}
-
-#search-button:hover {
+#generate-excel-button:hover,
+#search-button:hover,
+.view-button:hover,
+.delete-button:hover {
     box-shadow: 0 12px 10px 0 rgba(0,0,0,0.1),0 12px 10px 0 rgba(0,0,0,0.1);
     background-color: rgba(232, 176, 15, 1);
 }
@@ -107,10 +95,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* height: 550px; */
     margin-top: 10px;
 }
-
 
 #uploaded-doc-line {
     width: 1000px;
@@ -125,76 +111,114 @@
     gap: 50px;
     justify-content: space-around;
     align-items: center;
-    margin:auto;
+    margin: auto;
     height: 70px;
-    
+}
+
+.doc-number,
+.doc-uploaderName,
+.doc-documentType,
+.doc-description {
+    overflow: hidden;
 }
 
 .doc-number {
     width: 50px;
-    overflow: hidden;
 }
 
 .doc-uploaderName {
-    overflow: hidden;
     width: 180px;
 }
 
 .doc-documentType {
-    width:20px;
+    width: 120px;
 }
 
-.doc-description{
+.doc-description {
     width: 250px;
-    overflow: hidden;
-    
 }
 
 .doc-buttons {
-    /* width: 250px; */
     display: flex;
     flex-direction: row;
     gap: 10px;
     text-overflow: ellipsis;
 }
 
-.view-button {
-    height: 40px;
-    width: 150px;
-    border-radius: 5px;
-    background-color: #054422;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
+.view-button,
 .delete-button {
     height: 40px;
     width: 150px;
     border-radius: 5px;
-    background-color: white;
-    color: rgb(182, 0, 0);
-    border: none;
     cursor: pointer;
     font-weight: bold;
+    border: none;
+}
+
+.view-button {
+    background-color: #054422;
+    color: white;
+}
+
+.delete-button {
+    background-color: white;
+    color: rgb(182, 0, 0);
     border: solid;
     border-width: 2px;
 }
 
 .delete-button:hover {
-    box-shadow: 0 12px 10px 0 rgba(0,0,0,0.1),0 12px 10px 0 rgba(0,0,0,0.1);
     background-color: rgba(182, 0, 0, 1);
     color: white;
-    border: none;
-}
-
-.view-button:hover {
-    box-shadow: 0 12px 10px 0 rgba(0,0,0,0.1),0 12px 10px 0 rgba(0,0,0,0.1);
-    background-color: rgba(232, 176, 15, 1);
 }
 
 #doc-count {
     margin-top: 50px;
-    padding-left:10%;
+    padding-left: 10%;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .document-list {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .search-doc {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #search-field {
+        width: 100%;
+    }
+
+    #search-button,
+    #generate-excel-button {
+        width: 100%;
+    }
+
+    #uploaded-doc-line {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .doc-number,
+    .doc-uploaderName,
+    .doc-documentType,
+    .doc-description,
+    .doc-buttons {
+        width: 100%;
+    }
+
+    .doc-buttons {
+        justify-content: center;
+    }
+
+    .view-button,
+    .delete-button {
+        width: 100%;
+    }
 }
