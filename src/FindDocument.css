@@ -99,7 +99,8 @@
 
 .docs-area {
     height: 550px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .list-of-docs {
