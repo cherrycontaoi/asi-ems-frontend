@@ -31,7 +31,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    object-fit: contain;
 }
+
+
 
 .menu {
     border-radius: 15px;
