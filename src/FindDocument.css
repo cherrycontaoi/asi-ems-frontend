@@ -89,11 +89,12 @@
 
 #generate-excel-button:hover {
     box-shadow: 0 12px 10px 0 rgba(0,0,0,0.1),0 12px 10px 0 rgba(0,0,0,0.1);
-    background-color: rgba(232, 176, 15, 1);;
+    background-color: rgba(232, 176, 15, 1);
 }
 
 #search-button:hover {
     box-shadow: 0 12px 10px 0 rgba(0,0,0,0.1),0 12px 10px 0 rgba(0,0,0,0.1);
+    background-color: rgba(232, 176, 15, 1);
 }
 
 .docs-area {
@@ -189,6 +190,7 @@
 
 .view-button:hover {
     box-shadow: 0 12px 10px 0 rgba(0,0,0,0.1),0 12px 10px 0 rgba(0,0,0,0.1);
+    background-color: rgba(232, 176, 15, 1);
 }
 
 #doc-count {
