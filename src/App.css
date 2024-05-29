@@ -228,4 +228,9 @@
     .view-button, .delete-button {
         width: 48%;
     }
+
+    #admin-section {
+        border-top: 5px;
+        border-color: white;
+    }
 }
