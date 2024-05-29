@@ -218,6 +218,7 @@
     .doc-description,
     .doc-buttons {
         width: 100%;
+        gap: 3px;
     }
 
     .doc-buttons {
