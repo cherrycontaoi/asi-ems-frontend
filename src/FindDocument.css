@@ -191,12 +191,12 @@
     }
 
     #search-field {
-        width: 200px;
+        width: 100px;
     }
 
     #search-button,
     #generate-excel-button {
-        width: 200px;
+        width: 100px;
     }
 
     #uploaded-doc-line {
