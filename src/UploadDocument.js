@@ -248,7 +248,7 @@ function UploadDocument() {
                             <div className="input-field">
                                 Document Number<br/>
                                 <input
-                                    type="number" id="field"
+                                    type="text" id="field"
                                     placeholder=""
                                     value={newDocument.documentNumber}
                                     onChange={(e) => setNewDocument({ ...newDocument, documentNumber: e.target.value })}
