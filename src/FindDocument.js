@@ -58,6 +58,7 @@ function FindDocument({ isAdminLoggedIn }) {
 
     const handleReset = () => {
         getDocuments();
+        setSearchKeyword("")
     };
 
     const generateExcel = () => {
@@ -150,7 +151,7 @@ function FindDocument({ isAdminLoggedIn }) {
                         <button onClick={handleSearch} id="search-button">
                             SEARCH
                         </button>
-                        <button onClick={getDocuments; setSearchKeyword("")} id="search-button">
+                        <button onClick={handleReset} id="search-button">
                             RESET
                         </button>
                     </div>
