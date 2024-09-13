@@ -159,7 +159,7 @@ function FindDocument({ isAdminLoggedIn }) {
                         <button onClick={handleSearch} id="search-button">
                             SEARCH
                         </button>
-                        <button onClick={handleReset} id="search-button">
+                        <button onClick={getDocuments} id="search-button">
                             RESET
                         </button>
                     </div>
