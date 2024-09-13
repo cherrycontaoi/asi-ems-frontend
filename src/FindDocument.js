@@ -56,6 +56,10 @@ function FindDocument({ isAdminLoggedIn }) {
         setFilteredDocuments(filteredDocs);
     };
 
+    const handleReset = () => {
+        getDocuments();
+    };
+
     const generateExcel = () => {
         const excelData = filteredDocuments.map((document) => ({
             "Document Type": document.documentType,
@@ -145,6 +149,11 @@ function FindDocument({ isAdminLoggedIn }) {
                         />
                         <button onClick={handleSearch} id="search-button">
                             SEARCH
+                        </button>
+                    </div>
+                    <div className="reset-search">
+                        <button onClick={getDocuments()} id="search-button">
+                            RESET
                         </button>
                     </div>
                     {isLoading ? (
