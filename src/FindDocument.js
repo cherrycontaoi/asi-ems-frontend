@@ -152,7 +152,7 @@ function FindDocument({ isAdminLoggedIn }) {
                         </button>
                     </div>
                     <div className="reset-search">
-                        <button onClick={getDocuments()} id="search-button">
+                        <button onClick={handleSearch} id="search-button" onChange={(e) => setSearchKeyword("")}>
                             RESET
                         </button>
                     </div>
