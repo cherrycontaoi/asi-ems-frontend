@@ -55,19 +55,6 @@ function FindDocument({ isAdminLoggedIn }) {
         });
         setFilteredDocuments(filteredDocs);
     };
-
-    const handleReset = () => {
-        setIsLoading(true);
-        fetch(API_BASE + "/documents")
-            .then((res) => res.json())
-            .then((data) => {
-                setDocuments(data);
-                setFilteredDocuments(data);
-            })
-            .catch((err) => console.error("Error: ", err))
-            .finally(() => setIsLoading(false));
-        setSearchKeyword("");
-    };
     
     const generateExcel = () => {
         const excelData = filteredDocuments.map((document) => ({
@@ -158,9 +145,6 @@ function FindDocument({ isAdminLoggedIn }) {
                         />
                         <button onClick={handleSearch} id="search-button">
                             SEARCH
-                        </button>
-                        <button onClick={getDocuments} id="search-button">
-                            RESET
                         </button>
                     </div>
                     {isLoading ? (
