@@ -55,6 +55,11 @@ function FindDocument({ isAdminLoggedIn }) {
         });
         setFilteredDocuments(filteredDocs);
     };
+
+    const handleReset = () => {
+        getDocuments();
+        setSearchKeyword("");
+    };
     
     const generateExcel = () => {
         const excelData = filteredDocuments.map((document) => ({
