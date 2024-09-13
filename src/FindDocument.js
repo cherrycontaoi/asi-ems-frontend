@@ -151,6 +151,9 @@ function FindDocument({ isAdminLoggedIn }) {
                         <button onClick={handleSearch} id="search-button">
                             SEARCH
                         </button>
+                        <button onClick={handleReset} id="search-button">
+                            RESET
+                        </button>
                     </div>
                     {isLoading ? (
                         <div id="doc-count">Fetching uploaded documents...</div>
